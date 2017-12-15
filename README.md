@@ -2,17 +2,23 @@
 
 Roman Smirnov 
 
-TODO
-============================
-
-1. finish impl command line run
-2. answer the questions from the book
-
-
-
 ## Question 1
 
-??????
+### Q7.a 
+
+The probability is its evaluation over the sum of the population evaluation
+
+ $ P(i) = {f_i \over \sum_{k=0}^n f_k } $ 
+
+### Q7.b
+
+The expected number of offspring depends on the way reproduction is defined. Assuming the whole of the population remains at a constant size, the expected value will be $ E[i] = n \cdot P(i) $
+
+### Q19
+
+Early convergence means the algorithm is stuck in a local minima, most commonly due to a lack of genetic variance. Niching seperates the population into separate groups and allows them to reproduce independtly. Thus, genetic variance is re-introduced when the groups are allowed to reproduce again since they are  unlikely to have converged on a similar value.
+
+
 
 ---------------------------------------------------
 
@@ -32,21 +38,19 @@ The project is a implementation of a cryptarithmetic problem solver via a geneti
 
 4. cd to project root
 
-5. input a command in the following format ``` python main.py <term a> <operator> <term b> = <result term> ```
+5. input a command in the following format ``` python main.py <term a> <operator> <term b> = <result term> ``` or the command  ``` python main.py stats``` to generate and display a plot. 
 
    ​
 
-
-
-#### Terminal Usage 
+#### Terminal Usage Demo 
 
 ![terminal run example](terminal_run_example.png)
 
-#### Outputs
+#### Outputs Demo
 
 ![output example](test_run_example.png)
 
-#### Statistics and Graph Generation
+#### Statistics and Graph Generation Demo
 
 ![statistics and graphing](stats_demo.png)
 
@@ -127,6 +131,16 @@ There are two methods of reproduction:
 2. The genotype population is compared against a newly and independently created, randomized, population (i.e a niche). This method is computationally slower overall and is slow to converge, but is very useful for avoiding local minima (evaluation wise) . 
 
 The first method is used most of the time. The second method is used at  a set interval to help avoid local evaluation minima. 
+
+#### Probabilities 
+
+The probability of a genotype to be mutated is 1. The mutation position selection is done with a uniform probability, its done in the same positions for the whole population matrix. 
+
+#### Crossover
+
+The crossover is defined as the whole genome of the better evaluated parent (i.e. there's no crossover).
+
+###### 
 
 ####Algorithm Formulation
 
