@@ -1,8 +1,14 @@
 # MMN 12 Biological Computation
 
-Roman Smirnov - 312914443
+Roman Smirnov 
 
--------------------------------------------------
+TODO
+============================
+
+1. finish impl command line run
+2. answer the questions from the book
+
+
 
 ## Question 1
 
@@ -16,25 +22,33 @@ Roman Smirnov - 312914443
 
 The project is a implementation of a cryptarithmetic problem solver via a genetic/evolutionary algorithm.
 
-### Usage
+### Installation Instructions
 
 1. Install Python 3.5+
 
 2. Install Numpy
 
-3. cd to project root
+3. Install Matplotlib
 
-4. input a command in the following format ``` python main.py <term a> <operator> <term b> = <result term> ```
+4. cd to project root
+
+5. input a command in the following format ``` python main.py <term a> <operator> <term b> = <result term> ```
 
    ​
 
-#### Output demo
+
+
+#### Terminal Usage 
+
+![terminal run example](terminal_run_example.png)
+
+#### Outputs
 
 ![output example](test_run_example.png)
 
-#### Terminal usage demo 
+#### Statistics and Graph Generation
 
-![terminal run example](terminal_run_example.png)
+![statistics and graphing](stats_demo.png)
 
 
 
@@ -131,10 +145,14 @@ _Main Loop_:
 
 
 
+### Performance Analysis 
 
+We perform repetitive runs on various solver configurations and graph the results
 
+![population 50](stats_0.png)
 
+![population 500](stats_1.png)
 
+![population 5000](stats_2.png)
 
-
-
+We conclude that a larger population size requires less generations to find a solution.
